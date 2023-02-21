@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap");
+  body {
+    font-family: "Epilogue", sans-serif;
+    @apply text-base font-normal;
+  }
+  input {
+    @apply outline-none;
+  }
+  input:focus + .error-input {
+    display: none;
+  }
+
+  table {
+    @apply w-full;
+
+    thead tr {
+      @apply bg-gray-100;
+    }
+
+    tbody tr {
+      @apply border-b border-gray-100;
+    }
+
+    td,
+    th {
+      @apply align-middle p-6 text-left text-sm;
+    }
+
+    th {
+      @apply font-bold;
+    }
+  }
+
+  .table-project {
+    tr {
+      display: grid;
+      grid-template-columns: 10% 25% 20% 20% 15% 10%;
+    }
+    td {
+      display: grid;
+      align-items: center;
+    }
+  }
+
+  .table-user {
+    tr {
+      display: grid;
+      grid-template-columns: 10% 25% 10% 25% 20% 10%;
+    }
+    td {
+      display: grid;
+      align-items: center;
+    }
+  }
+
+  /* Ẩn nút tăng/giảm số */
+  .appearance-none::-webkit-inner-spin-button,
+  .appearance-none::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  // loading
+  .loader div {
+    animation-duration: 0.5s;
+  }
+
+  .loader div:first-child {
+    animation-delay: 0.1s;
+  }
+
+  .loader div:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  .loader div:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+}
